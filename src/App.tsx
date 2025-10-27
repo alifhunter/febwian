@@ -223,7 +223,7 @@ function ResumeContent({ scrollRef, theme }: { scrollRef: React.RefObject<HTMLDi
             <p className="mb-0">resume.</p>
           </div>
           <motion.a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1z444qkvSc5DHb2sVb4DLrvE8zePbfcBh/view?usp=sharing"
             download="Febrian_Alif_Pramoedito_Resume.pdf"
             className={`group relative inline-flex items-center gap-2 sm:gap-[12px] px-4 sm:px-[24px] py-2 sm:py-[12px] border rounded-[8px] overflow-hidden cursor-pointer transition-all duration-300 ${
               theme === 'dark' 
