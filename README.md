@@ -1,7 +1,7 @@
 
-  # Portfolio Website with Effects
+  # Alif's website
 
-  This is a code bundle for Portfolio Website with Effects. The original project is available at https://www.figma.com/design/GCHaQynSHCGp4EqfhGmAFP/Portfolio-Website-with-Effects.
+  My personal website
 
   ## Running the code
 
