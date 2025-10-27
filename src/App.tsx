@@ -14,10 +14,10 @@ import imgNoise from "figma:asset/5aa53278ded5b3e8a01731d8ebb5c7e4b5344880.png";
 // About Content Components
 function Links({ theme }: { theme: string }) {
   const links = [
-    { name: "LinkedIn", url: "https://linkedin.com", delay: 1.2 },
-    { name: "Behance", url: "https://behance.net", delay: 1.3 },
-    { name: "Dribbble", url: "https://dribbble.com", delay: 1.4 },
-    { name: "Github", url: "https://github.com", delay: 1.5 },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/febrianalifp/", delay: 1.2 },
+    { name: "Behance", url: "https://www.behance.net/falifdito", delay: 1.3 },
+    { name: "Dribbble", url: "https://dribbble.com/lifliflif", delay: 1.4 },
+    { name: "Github", url: "https://github.com/alifhunter/", delay: 1.5 },
   ];
 
   return (
