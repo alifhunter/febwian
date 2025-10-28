@@ -5,19 +5,19 @@ import { SpotlightEffect } from "./components/SpotlightEffect";
 import { AnimatedBorder } from "./components/AnimatedBorder";
 import svgPaths from "./imports/svg-kyp2qj6b0w";
 import svgPathsWorks from "./imports/svg-6tewr6ul4p";
-import imgImage1 from "figma:asset/d876aa1a9a3f9f6131016788d9b942d2560382f3.png";
-import imgGalaxyTabS8Ultra from "figma:asset/28b4fc50bea9ecf29def5e2debb8baf5c687c570.png";
-import imgHandAndIPhone16Pro from "figma:asset/adc9b101041cebf2105e92989c1f8d4e4d93e825.png";
-import imgMacBook13 from "figma:asset/29de75cb23b7d98343efdd11064716a6c2e582c4.png";
-import imgNoise from "figma:asset/5aa53278ded5b3e8a01731d8ebb5c7e4b5344880.png";
+import imgNoise from "./assets/5aa53278ded5b3e8a01731d8ebb5c7e4b5344880.png"
+import imgImage1 from "./assets/d876aa1a9a3f9f6131016788d9b942d2560382f3.png";
+import imgGalaxyTabS8Ultra from "./assets/28b4fc50bea9ecf29def5e2debb8baf5c687c570.png";
+import imgHandAndIPhone16Pro from "./assets/adc9b101041cebf2105e92989c1f8d4e4d93e825.png";
+import imgMacBook13 from "./assets/29de75cb23b7d98343efdd11064716a6c2e582c4.png";
 
 // About Content Components
 function Links({ theme }: { theme: string }) {
   const links = [
-    { name: "LinkedIn", url: "https://linkedin.com", delay: 1.2 },
-    { name: "Behance", url: "https://behance.net", delay: 1.3 },
-    { name: "Dribbble", url: "https://dribbble.com", delay: 1.4 },
-    { name: "Github", url: "https://github.com", delay: 1.5 },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/febrianalifp/", delay: 1.2 },
+    { name: "Behance", url: "https://www.behance.net/falifdito", delay: 1.3 },
+    { name: "Dribbble", url: "https://dribbble.com/lifliflif", delay: 1.4 },
+    { name: "Github", url: "https://github.com/alifhunter/", delay: 1.5 },
   ];
 
   return (
@@ -223,7 +223,7 @@ function ResumeContent({ scrollRef, theme }: { scrollRef: React.RefObject<HTMLDi
             <p className="mb-0">resume.</p>
           </div>
           <motion.a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1z444qkvSc5DHb2sVb4DLrvE8zePbfcBh/view?usp=sharing"
             download="Febrian_Alif_Pramoedito_Resume.pdf"
             className={`group relative inline-flex items-center gap-2 sm:gap-[12px] px-4 sm:px-[24px] py-2 sm:py-[12px] border rounded-[8px] overflow-hidden cursor-pointer transition-all duration-300 ${
               theme === 'dark' 
