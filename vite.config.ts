@@ -62,5 +62,5 @@
       port: 3000,
       open: true,
     },
-    base: "/febwian",
+    // base: "/febwian",
   });
