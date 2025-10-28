@@ -1,6 +1,7 @@
+
 {
       "name": "febwian",
-      "homepage": "https://alifhunter.github.io/febwian",
+      "homepage": "https://alifhunter.github.io/", 
       "version": "0.1.0",
       "private": true,
       "dependencies": {
