@@ -4,7 +4,6 @@
   import path from 'path';
 
   export default defineConfig({
-    base: '/febwian/',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -63,4 +62,5 @@
       port: 3000,
       open: true,
     },
+    // base: "/febwian",
   });
