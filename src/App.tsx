@@ -42,6 +42,57 @@ function Links({ theme }: { theme: string }) {
   );
 }
 
+function DownloadButton({
+  href,
+  label,
+  fileName,
+  theme,
+}: {
+  href: string;
+  label: string;
+  fileName: string;
+  theme: string;
+}) {
+  return (
+    <motion.a
+      href={href}
+      download={fileName}
+      className={`group relative inline-flex items-center gap-2 sm:gap-[12px] px-4 sm:px-[24px] py-2 sm:py-[12px] border rounded-[8px] overflow-hidden cursor-pointer transition-all duration-300 ${
+        theme === 'dark'
+          ? 'border-white/30 hover:border-white/60'
+          : 'border-gray-300 hover:border-gray-500'
+      }`}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <div className={`absolute inset-0 transition-all duration-300 ${
+        theme === 'dark'
+          ? 'bg-white/0 group-hover:bg-white/5'
+          : 'bg-gray-900/0 group-hover:bg-gray-900/5'
+      }`} />
+      <span className={`font-['Inter:Light',_sans-serif] font-light text-[14px] sm:text-[16px] relative z-10 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+        {label}
+      </span>
+      <svg
+        className="relative z-10 transition-transform duration-300 group-hover:translate-y-[2px]"
+        width="16"
+        height="16"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 3.33334V13.3333M10 13.3333L13.3333 10M10 13.3333L6.66667 10M3.33333 16.6667H16.6667"
+          stroke={theme === 'dark' ? 'white' : '#111827'}
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </motion.a>
+  );
+}
+
 function AboutContent({ scrollRef, theme }: { scrollRef: React.RefObject<HTMLDivElement>; theme: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -118,8 +169,16 @@ function WorksContent({ scrollRef, theme }: { scrollRef: React.RefObject<HTMLDiv
       id="works-section"
     >
       <div className={`content-stretch flex flex-col gap-6 sm:gap-10 lg:gap-[48px] items-start w-full ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`} data-name="Content Works">
-        <div className="font-['Inter:Extra_Light',_sans-serif] font-extralight leading-[normal] not-italic relative shrink-0 text-[40px] sm:text-[52px] lg:text-[64px]">
-          <p className="mb-0">works.</p>
+        <div className="flex flex-col items-start gap-4 sm:gap-6 w-full">
+          <div className="font-['Inter:Extra_Light',_sans-serif] font-extralight leading-[normal] not-italic relative shrink-0 text-[40px] sm:text-[52px] lg:text-[64px]">
+            <p className="mb-0">works.</p>
+          </div>
+          <DownloadButton
+            href="https://drive.google.com/file/d/1VZrjoWAYzxX9HmUcuo8Nuzd_tgi_njIm/view?usp=sharing"
+            label="Download Portfolio"
+            fileName="Febrian_Alif_Pramoedito_Portfolio.pdf"
+            theme={theme}
+          />
         </div>
         {/* Project 1 */}
         <div className="content-stretch flex flex-row sm:flex-row gap-3 sm:gap-[24px] items-start relative shrink-0 w-full">
@@ -222,42 +281,12 @@ function ResumeContent({ scrollRef, theme }: { scrollRef: React.RefObject<HTMLDi
           <div className="font-['Inter:Extra_Light',_sans-serif] font-extralight leading-[normal] not-italic relative shrink-0 text-[40px] sm:text-[52px] lg:text-[64px]">
             <p className="mb-0">resume.</p>
           </div>
-          <motion.a
+          <DownloadButton
             href="https://drive.google.com/file/d/1z444qkvSc5DHb2sVb4DLrvE8zePbfcBh/view?usp=sharing"
-            download="Febrian_Alif_Pramoedito_Resume.pdf"
-            className={`group relative inline-flex items-center gap-2 sm:gap-[12px] px-4 sm:px-[24px] py-2 sm:py-[12px] border rounded-[8px] overflow-hidden cursor-pointer transition-all duration-300 ${
-              theme === 'dark' 
-                ? 'border-white/30 hover:border-white/60' 
-                : 'border-gray-300 hover:border-gray-500'
-            }`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className={`absolute inset-0 transition-all duration-300 ${
-              theme === 'dark' 
-                ? 'bg-white/0 group-hover:bg-white/5' 
-                : 'bg-gray-900/0 group-hover:bg-gray-900/5'
-            }`} />
-            <span className={`font-['Inter:Light',_sans-serif] font-light text-[14px] sm:text-[16px] relative z-10 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-              Download Resume
-            </span>
-            <svg 
-              className="relative z-10 transition-transform duration-300 group-hover:translate-y-[2px]" 
-              width="16" 
-              height="16" 
-              viewBox="0 0 20 20" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path 
-                d="M10 3.33334V13.3333M10 13.3333L13.3333 10M10 13.3333L6.66667 10M3.33333 16.6667H16.6667" 
-                stroke={theme === 'dark' ? 'white' : '#111827'} 
-                strokeWidth="1.5" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              />
-            </svg>
-          </motion.a>
+            label="Download Resume"
+            fileName="Febrian_Alif_Pramoedito_Resume.pdf"
+            theme={theme}
+          />
         </div>
 
         <div className="content-stretch flex flex-col gap-6 sm:gap-8 lg:gap-[40px] items-start relative shrink-0 w-full">
